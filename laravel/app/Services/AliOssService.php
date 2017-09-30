@@ -2,8 +2,6 @@
 
 namespace App\Services;
 
-use Illuminate\Support\Facades\Request;
-
 class AliOssService
 {
     private $accessKey = '';
