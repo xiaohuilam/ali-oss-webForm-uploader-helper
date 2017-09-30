@@ -31,7 +31,7 @@ Ali-OSS-webForm-upload-helper
 --------------------
 ### 1、添加服务提供者并注册服务
 * 复制 laravel/Providers/AliOssServiceProvider.php 到 app/Provides 目录
-* 复制 laravel/Services/AliOssService.php 到 app/Service 目录
+* 复制 laravel/Services/AliOssService.php 到 app/Services 目录
 * 在 config/app.php 的 providers 数组中添加 App\Providers\aliOssServiceProvider::class,
 ### 2、添加配置
 * 复制 laravel/config/aliOss.php 到 config/aliOss.php
@@ -40,9 +40,9 @@ Ali-OSS-webForm-upload-helper
 * 复制 laravel/routes/aliOss.php 到 app/routes/aliOss.php 并在 app/routes/api.php 中 require aliOss.php
 ### 4、添加视图
 * 复制 laravel/public/plupload 到 app/public/plupload
-* 复制 laravel/resources/views/oss-test.blade.php 到 app/resources/views/oss-test.blade.php
+* 复制 laravel/resources/views/oss-test.blade.php 到 app/resources/views 目录
 ### 5、访问 /api/oss/test即可实现表单直传demo
-* 需要在回调的业务处理可以在 app('aliOss')->callback() 中添加闭包，闭包需要接受一个 $fileInfo 数组
+* 需要在回调时进行的的业务处理可以在 app('aliOss')->callback() 中添加闭包，闭包需要接受一个 $fileInfo 数组
 
 ---------------------
 Being lack of time, I didn't translate this markdown into English. If you need an English version, please mail to 745544921@qq.com, I will assist you!
